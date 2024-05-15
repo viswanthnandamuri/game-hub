@@ -12,6 +12,7 @@ import { BsGlobe } from "react-icons/bs";
 import { Platform } from "../hooks/useGames";
 import { HStack, Icon, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons";
+import { SiMacos } from "react-icons/si";
 interface Props {
   platforms: Platform[];
 }
@@ -26,6 +27,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     nintendo: SiNintendo,
     linux: FaLinux,
     web: BsGlobe,
+    macos: SiMacos,
   };
   return (
     <>
