@@ -3,6 +3,7 @@ import useData from "./useData";
 import { Genre } from "./useGenres";
 import { Platforms } from "./usePlatforms";
 import { GameQuery } from "../App";
+import SearchInput from "../components/SearchInput";
 
 export interface Platform{
   id:number;
@@ -21,7 +22,9 @@ const useGames=(gameQuery:GameQuery)=>useData<Game>('/games',{params:
   {
     genres:gameQuery.genre?.id,
     parent_platforms:gameQuery.platform?.id,
-    ordering:gameQuery.sortOrder
+    ordering:gameQuery.sortOrder,
+    search:gameQuery.searchText
+
   }},[gameQuery])
 
 export default useGames
